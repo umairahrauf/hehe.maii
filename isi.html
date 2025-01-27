@@ -1,0 +1,152 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Panjang</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        button {
+            background-color: #a421a8;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f7b4fd;
+            color: #000000;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            max-height: 80%; /* Hadkan ketinggian pop-up */
+            padding: 20px;
+            text-align: left;
+            overflow-y: auto; /* Tambahkan scrollbar */
+            z-index: 1000;
+            display: none;
+        }
+
+        .popup p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .popup button {
+            margin-top: 20px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .navigation {
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            background-color: #972032;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: #ff69b4;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌸🌸🌸</h1>
+    <button onclick="showPopup()">Notes!</button>
+
+    <!-- Pop-up dan Overlay -->
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+    <div class="popup" id="popup">
+        <p>
+           Hi,<br>
+           Sebenarnya, kitanya tak pandai sangat nak luahkan hehehe tapi dah 
+           lama sangat pendam lebih baik kita terus terang jela ek yg sebenarnya maira ni dah lama sangat nak bagitau dia ni suka kepada orang yang membaca ni. 
+           Tapi tula kitanya sedar diri dan tak mampu nak bagitau terus terang hmmm. Maaf sangat-sangat kalau sepanjang awaknya baca ni ada buat rasa tak selesa ke apa
+           saya minta maaf. Saya tak mengharapkan apa-apa balasan dari awaknya dan sekurang-kurangnya saya rasa lega dapat lepaskan semua ni after nak dekat 8 tahun.
+           Disebabkan malam ni malam 27 Rejab, saya doakan awak sentiasa dilimpahi dengan kebahagiaan dan ketenangan, hidup awak penuh dengan keberkatan. 
+           Semoga hati awak selalu dilindungi dan segala urusan awak dipermudahkan. Saya harap apa saja yang terbaik untuk awak, dan semoga Allah memberi petunjuk yang 
+           baik dalam setiap langkah hidup awak! AMINNNN.<br>
+           In advance saya nak cakap happy birthday, selamat berpuasa dan selamat hari raya!!!!<br>
+           Sekian dari insan biasa,<br></p>
+           <p style="font-family: 'Courier New', Courier, monospace;">maiii</p>
+        
+        <br><button onclick="hidePopup()">Tutup</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+    <div class="navigation">
+        <!-- Butang Before -->
+        <a href="coba.html">Before</a>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p style="font-size: 15px;">©mairaaaa</p>
+        </div>
+    </footer>
+</body>
+</html>

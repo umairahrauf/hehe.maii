@@ -1,0 +1,192 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hehe</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff5f7;
+            padding: 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            background-color: #ffb6c1;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #ff69b4;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }     
+        
+        button {
+            background-color: #a421a8;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #f7b4fd;
+            color: #000000;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            background-color: #972032;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+           margin-right: 0px;
+           margin-bottom: 2000px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: #ff69b4;
+        }
+
+        .footer {
+            position:fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+                padding: 10px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            .popup {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                font-size: 18px;
+            }
+            .navigation a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="mayu.gif" usemap="#image-map" alt="Gambar Mayu">
+
+    <map name="image-map">
+        <area shape="rect" coords="10,10,100,100" alt="Nota 1" title="First letter" href="#" onclick="showPopup('Nak cakap kita dah lama tercrush dari 2018 sampai sekarang😇')">
+        <area shape="circle" coords="150,150,50" alt="Nota 2" title="Second letter" href="#" onclick="showPopup('Tapi takde la lama sangat')">
+        <area shape="poly" coords="200,200,250,250,200,300" alt="Nota 3" title="Third letter" href="#" onclick="showPopup('mungkin baru dapat ilham kot nak bagitau HEHEHE')">
+    </map>
+
+    <!-- Pop-up Container -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p id="popup-text"></p>
+        <button onclick="closePopup()">Tutup</button>
+    </div>
+
+    <script>
+        // Fungsi untuk memaparkan pop-up
+        function showPopup(message) {
+            document.getElementById('popup-text').textContent = message;
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Fungsi untuk menutup pop-up
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+    <p>p/s: Cuba tekan-tekan kat gambar tuuuu</p><br>
+    
+    <div class="tekan">
+        <a href="isi.html">
+        <button class="hidden-button">Next</button>
+        </a>
+    </div>   <br>
+
+
+    <div class="navigation">
+        <!-- Butang Before -->
+        <a href="indexc.html">Before</a>
+    
+    </div>
+
+    <footer>
+        <div class="footer">
+          <p style="font-size: 15px;">©mairaaaa</p>
+        </div>
+    </footer>  
+        
+</body>
+</html>
